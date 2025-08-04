@@ -509,7 +509,7 @@ const logoMap = {
   "Box": "logos/box.png",
   "Comeet": "logos/comeet.png",
   "Expensify": "logos/expensify.png",
-  "Fireberry": "logos/fireberry.png",
+  "Fireberry": "logos/Fireberry.png",
   "Salesforce": "logos/salesforce.png",
   "Bill.com": "logos/bill-com.png",
   "Jumpcloud": "logos/jumpcloud.png",
