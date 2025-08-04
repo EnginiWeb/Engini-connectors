@@ -543,7 +543,7 @@ const logoMap = {
   "Gusto": "logos/Gusto.png",
   "Open AI": "logos/openai.png",
   "Oracle E-Business Suite": "logos/oracle-ebs.png",
-  "PayPlus": "logos/payPlus.png",
+  "PayPlus": "logos/PayPlus.png",
   "PostgreSQL": "logos/PostgreSQL.png",
   "Priority": "logos/priority.png",
   "Quickbooks": "logos/quickbooks.png",
