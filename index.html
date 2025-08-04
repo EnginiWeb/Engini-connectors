@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engini Connector Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <img id="engini" class="engini" src="/logos/engini.png" alt="Engini logo" />
+        <h1 class="header-title">Connector Catalog</h1>
+        <p class="tagline">
+          Discover powerful integrations and unlock new possibilities for your
+          business automation
+        </p>
+      </div>  <main class="container">
+    
+    <div class="sidebar-filters">
+      <div class="filter-category">
+        <h3 class="category-title">Enterprise Security</h3>
+        <ul>
+          <li class="filter-item">
+            <i class="fas fa-shield-alt"></i> SOC2 Compliance
+          </li>
+          <li class="filter-item"><i class="fas fa-lock"></i> Double Encryption</li>
+        </ul>
+      </div>
+      <div class="filter-category">
+        <h3 class="category-title">Integration Methods</h3>
+        <ul>
+          <li class="filter-item"><i class="fas fa-share-alt"></i> REST API</li>
+          <li class="filter-item"><i class="fas fa-share-alt"></i> SOAP API</li>
+          <li class="filter-item"><i class="fas fa-share-alt"></i> RPC</li>
+          <li class="filter-item"><i class="fas fa-share-alt"></i> GraphQL</li>
+        </ul>
+      </div>
+      <div class="filter-category">
+        <h3 class="category-title">Local Integration</h3>
+        <ul>
+          <li class="filter-item"><i class="fas fa-file-alt"></i> FTP</li>
+          <li class="filter-item"><i class="fas fa-desktop"></i> OPA</li>
+          <li class="filter-item"><i class="fas fa-database"></i> Database</li>
+        </ul>
+      </div>
+      <div class="filter-category">
+        <h3 class="category-title">Universal Connectivity</h3>
+        <ul>
+          <li class="filter-item"><i class="fas fa-globe"></i> MCP</li>
+          <li class="filter-item"><i class="fas fa-exchange-alt"></i> Webhooks</li>
+          <li class="filter-item"><i class="fas fa-network-wired"></i> HTTP Request</li>
+          <li class="filter-item"><i class="fas fa-code"></i> Connector SDK</li>
+        </ul>
+      </div>
+      <div class="filter-category">
+        <h3 class="category-title">Authentication Methods</h3>
+        <ul>
+          <li class="filter-item"><i class="fab fa-google"></i> Google</li>
+          <li class="filter-item"><i class="fab fa-microsoft"></i> Microsoft</li>
+          <li class="filter-item"><i class="fas fa-key"></i> OAuth 1.0 / 2.0</li>
+          <li class="filter-item"><i class="fas fa-user-shield"></i> MFA</li>
+          <li class="filter-item"><i class="fas fa-sign-in-alt"></i> SSO</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </header>
+
+
+    
+    <div class="main-content-area">
+      <div class="search-export-container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search connectors..."
+          />
+        </div>
+      </div>
+
+      <p class="instruction" id="mainInstruction">
+        Click on any connector below to explore its specific use cases and
+        integration potential
+      </p>
+
+      <div id="connectorCatalog" class="connector-catalog view-active"></div>
+    </div>
+
+    
+    <div id="useCasesDisplay" class="use-cases-display view-inactive">
+      <h2 id="useCasesTitle" class="section-title"></h2>
+      <ul id="useCasesList" class="use-case-list"></ul>
+      <button id="backToConnectorsBtn" class="btn btn-secondary back-to-connectors">
+        <i class="fas fa-arrow-left"></i> Back to All Connectors
+      </button>
+    </div>
+  </main>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
