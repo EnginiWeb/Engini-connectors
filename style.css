@@ -472,7 +472,10 @@
       }
     }
 .connector-card img {
-  background: none;
-  mix-blend-mode: multiply;
-  image-rendering: -webkit-optimize-contrast;
+  background: transparent;
+  mix-blend-mode: multiply; /* blends white into transparency */
+}
+
+.connector-card img[src$=".png"] {
+  background-color: transparent;
 }
