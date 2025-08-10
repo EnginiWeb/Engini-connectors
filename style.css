@@ -471,4 +471,9 @@
         font-size: 0.9rem;
       }
     }
+.connector-card img {
+  background: none;
+  mix-blend-mode: multiply;
+  image-rendering: -webkit-optimize-contrast;
+}
 
