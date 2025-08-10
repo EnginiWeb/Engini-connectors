@@ -471,11 +471,4 @@
         font-size: 0.9rem;
       }
     }
-.connector-card img {
-  background: transparent;
-  mix-blend-mode: multiply; /* blends white into transparency */
-}
 
-.connector-card img[src$=".png"] {
-  background-color: transparent;
-}
