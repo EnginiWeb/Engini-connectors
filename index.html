@@ -2,120 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Engini Connector Catalog</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind (for utility-only polish, no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome (existing icons in filters & list bullets) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  <!-- Page CSS -->
   <link rel="stylesheet" href="style.css" />
-<link rel="icon" type="image/x-icon" href="logos/favicon.ico" />
-<link rel="icon" type="image/png" sizes="16x16" href="logos/favicon-16x16.png" />
-
 </head>
-<body>
-  <header>
-    <div class="container">
-      <div class="header-content">
-<img id="enginiLogo" class="engini-logo" src="logos/engini.png" alt="Engini logo" style="max-width: 360px;" />
-
-
-        <h1 class="header-title">Connector Catalog</h1>
-        <p class="tagline">
-          Discover powerful integrations and unlock new possibilities for your
-          business automation
-        </p>
-      </div>  <main class="container">
-    
-    <div class="sidebar-filters">
-      <div class="filter-category">
-        <h3 class="category-title">Enterprise Security</h3>
-        <ul>
-          <li class="filter-item">
-            <i class="fas fa-shield-alt"></i> SOC2 Compliance
-          </li>
-          <li class="filter-item"><i class="fas fa-lock"></i> Double Encryption</li>
-        </ul>
+<body class="bg-[#0B0C0E] text-neutral-200">
+  <!-- Top Nav (glass, sticky) -->
+  <header class="sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 mt-3 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl shadow-md flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="/logos/engini.png" alt="Engini logo" class="w-24 sm:w-28 h-auto" />
+      </a>
+      <div class="hidden sm:flex items-center gap-6 text-sm text-neutral-300">
+        <a href="https://enginiweb.github.io/Engini-CoWorker/" class="hover:text-white transition-colors">Home</a>
+       
+        <a href="https://engini.io/help/" class="hover:text-white transition-colors">Docs</a>
       </div>
-      <div class="filter-category">
-        <h3 class="category-title">Integration Methods</h3>
-        <ul>
-          <li class="filter-item"><i class="fas fa-share-alt"></i> REST API</li>
-          <li class="filter-item"><i class="fas fa-share-alt"></i> SOAP API</li>
-          <li class="filter-item"><i class="fas fa-share-alt"></i> RPC</li>
-          <li class="filter-item"><i class="fas fa-share-alt"></i> GraphQL</li>
-        </ul>
-      </div>
-      <div class="filter-category">
-        <h3 class="category-title">Local Integration</h3>
-        <ul>
-          <li class="filter-item"><i class="fas fa-file-alt"></i> FTP</li>
-          <li class="filter-item"><i class="fas fa-desktop"></i> OPA</li>
-          <li class="filter-item"><i class="fas fa-database"></i> Database</li>
-        </ul>
-      </div>
-      <div class="filter-category">
-        <h3 class="category-title">Universal Connectivity</h3>
-        <ul>
-          <li class="filter-item"><i class="fas fa-globe"></i> MCP</li>
-          <li class="filter-item"><i class="fas fa-exchange-alt"></i> Webhooks</li>
-          <li class="filter-item"><i class="fas fa-network-wired"></i> HTTP Request</li>
-          <li class="filter-item"><i class="fas fa-code"></i> Connector SDK</li>
-        </ul>
-      </div>
-      <div class="filter-category">
-        <h3 class="category-title">Authentication Methods</h3>
-        <ul>
-          <li class="filter-item"><i class="fab fa-google"></i> Google</li>
-          <li class="filter-item"><i class="fab fa-microsoft"></i> Microsoft</li>
-          <li class="filter-item"><i class="fas fa-key"></i> OAuth 1.0 / 2.0</li>
-          <li class="filter-item"><i class="fas fa-user-shield"></i> MFA</li>
-          <li class="filter-item"><i class="fas fa-sign-in-alt"></i> SSO</li>
-        </ul>
-      </div>
-    </div>
-    </div>
+    </nav>
   </header>
 
-
-    
-    <div class="main-content-area">
-      <div class="search-export-container">
-        <div class="search-box">
-          <i class="fas fa-search"></i>
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search connectors..."
-          />
-        </div>
+  <!-- Hero -->
+  <section class="pt-10 pb-4 bg-gradient-to-b from-[#0B0C0E] via-[#0F1012] to-[#151618]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-semibold text-white leading-tight">Connector Catalog</h1>
+        <p class="text-base sm:text-lg text-neutral-300 mt-3">
+          Discover powerful integrations and unlock new possibilities for your automation.
+        </p>
       </div>
 
-      <p class="instruction" id="mainInstruction">
-        Click on any connector below to explore its specific use cases and
-        integration potential
-      </p>
 
-      <div id="connectorCatalog" class="connector-catalog view-active"></div>
+  </section>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-16">
+    <!-- Search -->
+    <div class="flex items-center justify-between gap-3 mb-4">
+      <div class="relative w-full sm:w-96">
+        <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-white/40"></i>
+        <input id="searchInput" placeholder="Search connectors..."
+               class="w-full pl-9 pr-3 py-3 rounded-2xl bg-[#151618] border border-white/10 text-neutral-200 placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#8E7AEF] transition"/>
+      </div>
+      <!-- Optional premium-only toggle (wire up if needed) -->
+      <!-- <label class="hidden sm:flex items-center gap-2 text-sm">
+        <input id="premiumOnlyToggle" type="checkbox" class="accent-white/90">
+        <span>Premium only</span>
+      </label> -->
     </div>
 
-    
-    <div id="useCasesDisplay" class="use-cases-display view-inactive">
+    <p class="instruction text-center text-white/70" id="mainInstruction">
+      Click on any connector below to explore its specific use cases and integration potential.
+    </p>
+
+    <!-- Catalog grid -->
+    <div id="connectorCatalog" class="connector-catalog view-active"></div>
+
+    <!-- Use cases view -->
+    <section id="useCasesDisplay" class="use-cases-display view-inactive">
       <h2 id="useCasesTitle" class="section-title"></h2>
       <ul id="useCasesList" class="use-case-list"></ul>
       <button id="backToConnectorsBtn" class="btn btn-secondary back-to-connectors">
         <i class="fas fa-arrow-left"></i> Back to All Connectors
       </button>
-    </div>
+    </section>
   </main>
 
-
+  <!-- Footer -->
+  <footer class="bg-[#1B1D22] border-t border-white/10 py-10 text-sm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+      <div class="text-center md:text-left">
+        <img src="/logos/engini.png" alt="Engini logo" class="w-28 h-auto mx-auto md:mx-0" loading="lazy" decoding="async"/>
+        <p class="text-white/50 mt-3">© 2025 Engini. All rights reserved.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 text-white/70">
+        <div>
+          <p class="font-semibold text-white mb-2">Platform</p>
+          <ul class="space-y-1">
+            <li><a href="#" class="hover:underline">Architecture</a></li>
+            <li><a href="#" class="hover:underline">Agent OS</a></li>
+            <li><a href="#" class="hover:underline">Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-2">Build</p>
+          <ul class="space-y-1">
+            <li><a href="#" class="hover:underline">Connectors</a></li>
+            <li><a href="#" class="hover:underline">Workflow Builder</a></li>
+            <li><a href="#" class="hover:underline">AI Playbooks</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-2">Resources</p>
+          <ul class="space-y-1">
+            <li><a href="https://engini.io/help/" class="hover:underline">Docs</a></li>
+            <li><a href="https://engini.io/blog/" class="hover:underline">Blog</a></li>
+            <li><a href="https://engini.io/become-a-partner/" class="hover:underline">Partners</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
